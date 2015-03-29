@@ -42,16 +42,17 @@
 	  <li id="konLista2">Prezime: <input id="unos2" type="text" name="prezime"></li>
 	  <li id="konLista3">E-Mail:<input id="unos3" type="email" name="email"></li>
 	  <li id="konLista4">Poruka:</li>
-	  <textarea id="tekstporuke" name="poruka" rows="6" cols="1">
-	</textarea> 
-	  
 	  
 	</ul>
+	<textarea id="tekstporuke" name="poruka" rows="6" cols="1">
+	</textarea> 
 	<input id="buton1" type="submit" value="Posalji">
 	<input id="buton2" type="reset" value="Resetuj">
+	</div>
 	</form>
-	
-	
+
 	
 	</body>
 </html>
+	
+
