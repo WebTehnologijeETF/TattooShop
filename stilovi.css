@@ -7,7 +7,7 @@
  #back{
 
 	z-index:-1; 
-	background-image:url("../nadin/images/blackwall.jpg");
+	background:url("images/blackwall.jpg");
 	background-size:cover;
 	min-height: 100%;
 	min-width: 100px;
@@ -20,6 +20,9 @@
 	
 	 
  }
+ 
+ 
+ 
  #banner{
 	position:relative;
 	width:38%;
@@ -43,7 +46,7 @@
 	text-align:center;
 	}
 	
-#meni {
+/*#meni {
 	position:fixed;
 	width: 50%;
 	display:block;
@@ -53,12 +56,14 @@
 	margin-left:-25%;
 	margin-bottom:50px;
 	}
-	/* ovo izmijenit    meni sekcija  */
+	
+	
+	 ovo izmijenit    meni sekcija  
+	
 #meni ul {
 	width:100%;
 	min-width:100%;
 	list-style-type: none;
-	display:flex;
 	height:50px;
 	white-space:nowrap;
 	
@@ -80,6 +85,84 @@
 	text-decoration: none;
 	color:#831010;
 	}
+	*/
+	
+	#meni {
+	position:fixed;
+	width: 55%;
+	min-width:653px;
+	display:block;
+	z-index:10;
+	background:#7E7F88;
+	left:25%;
+	margin-bottom:50px;
+	
+	}
+
+	#meni ul {
+	width:100%;
+	min-width:100%;
+	/*min-width:653px;*/
+	list-style-type: none;
+	display:flex;
+	height:50px;
+	white-space:nowrap;
+	}
+
+	#meni li {
+	display:inline-block;
+	width:20%;
+	min-width:20%;
+	height:50px;	
+	}
+
+	#meni a{
+	display:block;
+	width:100%;
+	color:831010;
+	min-width:150px;
+	text-align: center;
+	font-size:100%;
+	padding: 16px 0px;
+	text-decoration: none;
+	font-weight: bold;
+	text-transform: uppercase;
+	}
+
+	#meni a:hover, a:active {
+		transition: 0.2s;
+		background-color: #6e301a;
+	}
+	
+#submenu{
+	display:none;
+	width:100%;
+	min-width:100%;
+	display:flex;
+	height:50px;
+	white-space:nowrap;
+    transition: 0.5s;
+}
+
+#submenu li{
+	display:none;
+	background:#7E7F88;
+	width:20%;
+	min-width:150px;
+	height:50px;
+}
+
+#submenu a{
+
+	transition: 0.2s;
+	display:block;
+	width:100%;
+	min-width:150px;
+    border-radius: 1%;    
+    clear: both;
+    text-align: center;
+        
+}
 	/* promjena pilikom mouse over  */
 	
 	#meni li:hover{
@@ -292,4 +375,17 @@
 	
 	#kolona:hover{
 	color:#FF4400;
+	}
+
+	
+	/* erroro svi */
+	
+	#greskaIme,#greskaPrezime,#greskaEmail,#greskaPoruka,#greskaDrzava{
+	/*background:url("../Images/red_cross.png") no-repeat;*/
+	width:210px;
+	min-width:210px;
+	white-space:nowrap;
+	color:red;
+	text-align:right;
+	display:inline-block;
 	}

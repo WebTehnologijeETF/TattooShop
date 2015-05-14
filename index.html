@@ -18,7 +18,13 @@
 	<ul>
 	  <li><a  href="index.html">Naslovna</a></li>
 	  <li><a  href="lokacije.html">Lokacije</a></li>
-	  <li><a  href="portofolij.html">Portofolij</a></li>
+	  <li onmouseout="hideMenu()" onmouseover="showMenu()"><a href="portofolij.html">Portofolij</a>
+	  <ul id="submenu" >
+				<li><a href="#">Nadin</a></li>
+				<li><a href="#">Dino</a></li>
+				<li><a href="#">Katt von D</a></li>
+			</ul>
+	  </li>
 	  <li><a  href="kontakt.html">Kontakt</a></li>
 	  <li><a  href="linkovi.html">Linkovi</a></li>
 	</ul>
@@ -54,19 +60,9 @@
 	<h3> Naslov novosti </h3>
 	<p id="autor1">Nadin Hasanic   20.03.2015. -   01:13 </p>
 	
-	<p id="tekstNovosti1">
-	Many tattoos serve as rites of passage, marks of status and rank, symbols of religious and spiritual devotion,
-	decorations for bravery, sexual lures and marks of fertility, pledges of love, punishment, amulets and talismans,
-	protection, and as the marks of outcasts, slaves and convicts. The symbolism and impact of tattoos varies in different places and cultures.
-	Tattoos may show how a person feels about a relative (commonly mother/father or daughter/son) or about an unrelated person.
-	Today, people choose to be tattooed for artistic, cosmetic, sentimental/memorial, religious, and magical reasons, and to symbolize their
-	belonging to or identification with particular groups, including criminal gangs (see criminal tattoos) or a particular ethnic group or law-abiding
-	subculture.
-	
-	<a id="detaljnije1" href="index.html">...detaljnije...</a>
-	</p>
+	<?php include('novosti.php');?>
 	
 	</div>
-	
+	<script src="skriptameni.js"></script>
 	</body>
 </html>

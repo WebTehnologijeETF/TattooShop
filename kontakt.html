@@ -1,58 +1,32 @@
-<!DOCTYPE html>
-
-<html>
-	<head>
-	<meta charset="UTF-8">
-	<title>Nadin tattoo</title>
-	<link rel="stylesheet" type="text/css" href="stilovi.css">
-	</head>
-	
-	
-	<body id="tijelo">
-	
-	<div id="back"></div>
-	
-	<div id="meni">
-
-	
-	<ul>
-	  <li><a  href="index.html">Naslovna</a></li>
-	  <li><a  href="lokacije.html">Lokacije</a></li>
-	  <li><a  href="portofolij.html">Portofolij</a></li>
-	  <li><a  href="kontakt.html">Kontakt</a></li>
-	  <li><a  href="linkovi.html">Linkovi</a></li>
-	</ul>
-	
-
-	</div>
-	
-	
-	<div id="banner">
-	<a id="linklogo" href="index.html"> <img id="logo" src="images/logo3.jpg" alt="Logo" ></a>
-	</div>
-	
+<div id="wrapper">
+		
 	<h1> Kontakt </h1>
 	
 	<form>
 	<div id="kontaktiDiv">
-
+	<?php include 'validacijaPHP.php';?>
 	
-	<ul>
-	  <li id="konLista1">Ime: <input id="unos1" type="text" name="ime"></li>
-	  <li id="konLista2">Prezime: <input id="unos2" type="text" name="prezime"></li>
-	  <li id="konLista3">E-Mail:<input id="unos3" type="email" name="email"></li>
-	  <li id="konLista4">Poruka:</li>
+	<label id="imeLabel">Ime:</label><br>
+	<input id="unos1" placeholder="Ime" onblur="provjeriIme()" type="text" name="ime"><br>
+	<label id="imeLabel">Prezime:</label><br>
+	<input id="unos2" placeholder="Prezime (opcionalno) " type="text" name="prezime"><div id="greskaPrezime"></div>
+	<label id="imeLabel">E-mail:</label><br>
+	<input id="unos3" placeholder="mail@gmail" onblur="provjeriMail()" type="email" name="email"><br>
+    <label id="imeLabel">Drzava:</label><br>
+	<input id="unos4" type="text" onblur="provjeriDrzavu" name="drzava"><br>
+    <label id="imeLabel">Poruka:</label><br>
 	  
-	</ul>
 	<textarea id="tekstporuke" name="poruka" rows="6" cols="1">
-	</textarea> 
-	<input id="buton1" type="submit" value="Posalji">
+	</textarea>
+	<div id="greskaPoruka"></div>
+	
+	<input id="buton1" onclick="odobriSve()" type="submit"   value="Posalji"<?php if(praznaPolja(.$_POST['ime'] , .$_POST['email'] , .$_POST['drzava']) && validirajIme(.$_POST['ime']) && validirajEmail(.$_POST['email']) )
+	{ prikaziUneseno(.$_POST['ime'] , .$_POST['prezime'] , .$_POST['email'], .$_POST['poruka'] , .$_POST['drzava'])}  ?>>
 	<input id="buton2" type="reset" value="Resetuj">
 	</div>
 	</form>
-
+</div>
 	
-	</body>
-</html>
+
 	
 
